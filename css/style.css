@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
-/* :root {
-  --primary-color: #047aed;
-  --secondary-color: #1c3fa8;
-  --dark-color: #002240;
-  --light-color: #f4f4f4;
-  --success-color: #5cb85c;
-  --error-color: #d9534f;
-} */
 
 :root {
   --primary-color: #047aed;
@@ -165,12 +157,16 @@ code, pre {
 .stats {
   padding-top: 100px;
   animation: slideInFromBottom 1s ease-in;
-
+  border: 3px solid black;
 }
 
 .stats-heading {
-  max-width: 500px;
+  /* width: 100%; */
+  max-width: 550px;
   margin: auto;
+  border: 3px solid black;
+  /* align-self: center; */
+  justify-content: center;
 }
 
 .stats .grid h3 {
@@ -329,7 +325,10 @@ code, pre {
   .cli .grid,
   .cloud .grid,
   .features-main .grid,
-  .docs-main .grid {
+  .features-head .grid,
+  .features-sub-head .grid,
+  .docs-main .grid,
+  .docs-head .grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
@@ -379,16 +378,16 @@ code, pre {
 /* Mobile */
 @media(max-width: 500px) {
   .navbar {
-    height: 110px;
+    height: 150px;
   }
 
   .navbar .flex {
     flex-direction: column;
+    overflow: auto;
   }
 
   .navbar ul {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.1);
   }
-
 }
